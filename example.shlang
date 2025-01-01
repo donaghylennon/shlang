@@ -1,0 +1,16 @@
+func main() {
+    x: int
+    x = square(4)
+
+    for i: int = 0 to x {
+        hello("world!")
+    }
+}
+
+func square(x: int): int {
+    return x * x
+}
+
+func hello(target: string) {
+    print("hello {}", target)
+}

@@ -1,0 +1,34 @@
+program = function +
+
+function = "func" identifier "(" declaration ( "," declaration )* ")" ( ":" identifier )?
+            compound-statement
+
+statement = compound-statement | basic-statement | if | for | while
+
+basic-statement = expression | declaration | assignment
+
+compound-statement = "{" statement+ "}"
+
+declaration = "var" identifier ":" identifier
+
+assignment = (declaration | identifier) "=" expression
+
+if = "if" expression statement ("else" statement )*
+
+for = "for" declaration "=" expression "to" expression statement
+
+while = "while" expression statement
+
+expression = identifier | literal | function-call
+
+identifier = ("a" - "z" | "A" - "Z" | "_") ("a" - "z" | "A" - "Z" | "_" | "0" - "9")*
+
+literal = string-literal | numeric-literal
+
+string-literal = '"' <any character>* '"'
+
+numeric-literal = ("0" - "9")+
+
+function-call = identifier "(" expression ("," expression)* ")"
+
+parameter = declaration
