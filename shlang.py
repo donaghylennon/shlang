@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import lexer
 import parser
 from pprint import pprint

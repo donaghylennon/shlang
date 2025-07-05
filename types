@@ -1,0 +1,5 @@
+int - 64 bit integer
+char - 8 bit integer
+string - int length, char pointer
+array[T] - int length, T pointer
+pointer T
